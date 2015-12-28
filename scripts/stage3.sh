@@ -1,6 +1,7 @@
 #!/bin/bash
 
-tarball=stage3-amd64-nomultilib-$STAGE3.tar.bz2
+#tarball=stage3-amd64-nomultilib-$STAGE3.tar.bz2
+tarball=stage3-amd64-$STAGE3.tar.bz2
 
 mount /dev/sda4 /mnt/gentoo
 

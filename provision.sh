@@ -18,7 +18,11 @@ for script in \
   stage3      \
   mounts      \
   resolv.conf \
+  gcc         \
   portage     \
+  git         \
+  ruby        \
+  chef        \
   timezone    \
   fstab       \
   kernel      \
