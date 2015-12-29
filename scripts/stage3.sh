@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#tarball=stage3-amd64-nomultilib-$STAGE3.tar.bz2
-tarball=stage3-amd64-$STAGE3.tar.bz2
+base_url="http://distfiles.gentoo.org/releases/amd64/autobuilds/"
+current_stage3=$(curl -s "${base_url}latest-stage3-amd64-nomultilib.txt" | grep -v "^#" | cut -f1 -d " ")
 
 mount /dev/sda4 /mnt/gentoo
 
 cd /mnt/gentoo
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/$STAGE3/$tarball
-tar xvjpf $tarball
-rm -f $tarball
+wget "${base_url}${current_stage3}"
+tar xvjpf stage3-amd64-nomultilib-*.tar.bz2
+rm -f stage3-amd64-nomultilib-*.tar.bz2

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [[ -z $STAGE3 ]]
-then
-  echo "STAGE3 environment variable must be set to a timestamp."
-  exit 1
-fi
-
 if [[ -z $SCRIPTS ]]
 then
   SCRIPTS=.
@@ -18,7 +12,6 @@ for script in \
   stage3      \
   mounts      \
   resolv.conf \
-  gcc         \
   portage     \
   git         \
   ruby        \
@@ -32,6 +25,9 @@ for script in \
   vagrant     \
   cleanup
 do
+  echo "------------------------------------------------------------------------"
+  echo "Running $script.sh"
+  echo "------------------------------------------------------------------------"
   "$SCRIPTS/scripts/$script.sh"
 done
 

@@ -26,15 +26,19 @@
       "guest_additions_mode": "disable",
       "guest_os_type": "Gentoo_64",
       "headless": false,
-        "iso_checksum": "075212e58ddec6ef04791fc90c573c450b24b34ae38eccaf29cc6c17b7436148e4ef4f133cf48d84aa597e02117b3bda7086d2a7176224c208f71dba2622a913",
-      "iso_checksum_type": "sha512",
-      "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-{{user `stage3`}}.iso",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "iso_url": "{{user `iso_url``}}",
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `password`}}",
       "ssh_username": "{{user `username`}}",
       "ssh_wait_timeout": "20s",
       "type": "virtualbox-iso",
-      "vm_name": "Gentoo"
+      "vm_name": "Gentoo",
+      "vboxmanage": [
+          ["modifyvm", "{{.Name}}", "--memory", "{{user `memory`}}"],
+          ["modifyvm", "{{.Name}}", "--cpus", "{{user `cpus`}}"]
+      ]
     }
   ],
   "description": "Faithful Stage 3 Gentoo Installation (VirtualBox)",
@@ -52,7 +56,6 @@
     },
     {
       "environment_vars": [
-        "STAGE3={{user `stage3`}}",
         "VM_TYPE=virtualbox",
         "SCRIPTS=/tmp"
       ],
@@ -64,8 +67,12 @@
   ],
   "variables": {
     "password": "vagrant",
-    "stage3": "20150924",
-    "username": "root"
+    "username": "root",
+    "memory": "2048",
+    "cpus": "4",
+    "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20150924.iso",
+    "iso_checksum_type": "sha512",
+    "iso_checksum": "075212e58ddec6ef04791fc90c573c450b24b34ae38eccaf29cc6c17b7436148e4ef4f133cf48d84aa597e02117b3bda7086d2a7176224c208f71dba2622a913"
   }
 }
 

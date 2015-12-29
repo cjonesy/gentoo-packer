@@ -2,7 +2,7 @@
 
 cat << EOF >> /mnt/gentoo/etc/portage/make.conf
 # use ruby 2.2
-RUBY_TARGETS="ruby20 ruby21 ruby22"
+RUBY_TARGETS="ruby22"
 EOF
 
 cat << EOF >> /mnt/gentoo/etc/portage/package.accept_keywords
