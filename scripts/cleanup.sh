@@ -6,7 +6,6 @@ emerge -C sys-kernel/gentoo-sources
 emerge --depclean
 EOF
 
-rm -rf /mnt/gentoo/usr/portage
 rm -rf /mnt/gentoo/tmp/*
 rm -rf /mnt/gentoo/var/log/*
 rm -rf /mnt/gentoo/var/tmp/*
