@@ -11,17 +11,17 @@ Currently, only virtualbox is supported as I do not have VMWare tools to build w
 ### Install Virtualbox
 VirtualBox can be obtained [here](https://www.virtualbox.org/wiki/Downloads).
 
-Or, via Homebrew: `brew cask install virtualbox`
+Via Homebrew: `brew cask install virtualbox`
 
 ### Install Vagrant
 Vagrant can be obtained [here](http://www.vagrantup.com/downloads.html).
 
-Or, via Homebrew: `brew cask install vagrant`
+Via Homebrew: `brew cask install vagrant`
 
 ### Install Packer
 Setup instructions can be found [here](https://www.packer.io/intro/getting-started/setup.html).
 
-Or, via Homebrew: `brew install packer`
+Via Homebrew: `brew install packer`
 
 ### Usage
 
@@ -29,7 +29,8 @@ Or, via Homebrew: `brew install packer`
 git clone https://github.com/cjonesy/gentoo-packer.git
 cd gentoo-packer
 packer build virtualbox.json
-vagrant init /tmp/gentoo64-virtualbox.box
+vagrant box add cjonesy/gentoo gentoo-amd64-stage3-virtualbox.box
+vagrant init cjonesy/gentoo
 vagrant up
 vagrant ssh
 ```
