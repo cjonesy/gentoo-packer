@@ -70,9 +70,9 @@
     "username": "root",
     "memory": "2048",
     "cpus": "4",
-    "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20150924.iso",
+    "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20160428.iso",
     "iso_checksum_type": "sha512",
-    "iso_checksum": "075212e58ddec6ef04791fc90c573c450b24b34ae38eccaf29cc6c17b7436148e4ef4f133cf48d84aa597e02117b3bda7086d2a7176224c208f71dba2622a913"
+    "iso_checksum": "d550010c85bf3be402ff8311ef7bdb210307d2988d33996ba74ae3c988ab3e5d266d23e6e3491bd936be4eb6b88804679e18e18cd5045c431dfa52622fd00066"
   }
 }
 
