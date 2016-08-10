@@ -32,7 +32,7 @@
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `password`}}",
       "ssh_username": "{{user `username`}}",
-      "ssh_wait_timeout": "20s",
+      "ssh_wait_timeout": "60s",
       "type": "virtualbox-iso",
       "vm_name": "Gentoo",
       "vboxmanage": [
@@ -70,9 +70,9 @@
     "username": "root",
     "memory": "2048",
     "cpus": "4",
-    "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20160428.iso",
+    "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-20160804.iso",
     "iso_checksum_type": "sha512",
-    "iso_checksum": "d550010c85bf3be402ff8311ef7bdb210307d2988d33996ba74ae3c988ab3e5d266d23e6e3491bd936be4eb6b88804679e18e18cd5045c431dfa52622fd00066"
+    "iso_checksum": "cb9f55e2d0f8492c646a10c6f498825e60512520f9edc7f619051c7f054283b93120d18471993d75832dc5ee58e2d835882dd372fc202575fe07b5d6ff4560ba"
   }
 }
 
